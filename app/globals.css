@@ -1,0 +1,195 @@
+@import "@fortawesome/fontawesome-svg-core/styles.css";
+@import "tailwindcss";
+
+/* ============================================================
+   TURBOSERV INSURANCE BROKERS LIMITED — GLOBAL DESIGN SYSTEM
+   Premium corporate aesthetic: warm neutrals, serif elegance
+   ============================================================ */
+
+/* ---- Custom Tailwind Theme ---- */
+@theme {
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-signature: var(--font-signature), cursive;
+
+  --font-inter: var(--font-inter);
+  --font-merriweather: var(--font-merriweather);
+  --font-montserrat: var(--font-montserrat);
+  --font-roboto: var(--font-roboto);
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-merriweather), serif;
+  --font-heading: var(--font-montserrat), sans-serif;
+
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-800: #102a43;
+  --color-navy-900: #0b1b2d;
+  --color-navy-950: #071220;
+
+  --color-red-50: #fff5f5;
+  --color-red-100: #ffe3e3;
+  --color-red-500: #dc2626;
+  --color-red-600: #b91c1c;
+  --color-red-700: #991b1b;
+
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+
+  --ease-premium: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ---- Reset & Base ---- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #1a1a1a;
+    background-color: transparent;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  img,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* ---- Smooth scrollbar ---- */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+}
+
+/* ---- Footer CTA Shimmer Animation ---- */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ---- About Page Theme Override ---- */
+.about-page-theme {
+  --font-display: var(--font-merriweather), serif;
+  --font-body: var(--font-inter), sans-serif;
+  font-family: var(--font-body);
+}
+
+.about-page-theme h1,
+.about-page-theme h2,
+.about-page-theme h3,
+.about-page-theme h4,
+.about-page-theme h5,
+.about-page-theme h6 {
+  font-family: var(--font-display);
+}
+
+/* ---- Corporate Insurance Page Theme Override ---- */
+.corporate-insurance-theme {
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-inter), sans-serif;
+  font-family: var(--font-body);
+}
+
+.corporate-insurance-theme h1,
+.corporate-insurance-theme h2,
+.corporate-insurance-theme h3,
+.corporate-insurance-theme h4,
+.corporate-insurance-theme h5,
+.corporate-insurance-theme h6 {
+  font-family: var(--font-display);
+}
+
+/* ---- Claims, Home, Contact & Life Health Page Theme Override ---- */
+.claims-page-theme,
+.home-page-theme,
+.contact-page-theme,
+.life-health-page-theme {
+  --font-display: var(--font-montserrat), sans-serif;
+  --font-body: var(--font-roboto), sans-serif;
+  font-family: var(--font-body);
+}
+
+.claims-page-theme h1,
+.claims-page-theme h2,
+.claims-page-theme h3,
+.claims-page-theme h4,
+.claims-page-theme h5,
+.claims-page-theme h6,
+.home-page-theme h1,
+.home-page-theme h2,
+.home-page-theme h3,
+.home-page-theme h4,
+.home-page-theme h5,
+.home-page-theme h6,
+.contact-page-theme h6,
+.life-health-page-theme h1,
+.life-health-page-theme h2,
+.life-health-page-theme h3,
+.life-health-page-theme h4,
+.life-health-page-theme h5,
+.life-health-page-theme h6 {
+  font-family: var(--font-display);
+}
+
+/* ---- Infinite Marquee Logo Loop ---- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
