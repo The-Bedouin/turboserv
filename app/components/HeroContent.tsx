@@ -113,6 +113,11 @@ export default function HeroContent() {
               </svg>
             </span>
           </a>
+          <div className="text-center mt-2">
+            <span className="text-[0.6rem] text-gray-400 font-medium tracking-wide">
+              (RC: 1898699)
+            </span>
+          </div>
         </motion.div>
       </motion.div>
     </motion.div>

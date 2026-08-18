@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const IconExecutive = () => (
   <svg width="56" height="56" viewBox="0 0 40 40" fill="none">
@@ -40,7 +41,7 @@ export default function ExecutiveMessage() {
         </motion.span>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* MD headshot placeholder */}
+          {/* MD Headshot Image */}
           <motion.div
             className="relative"
             initial="hidden"
@@ -49,15 +50,14 @@ export default function ExecutiveMessage() {
             custom={1}
           >
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-navy-100 shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-navy-200 via-navy-100 to-slate-100 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-navy-950 border-4 border-white/60 mx-auto mb-4 flex items-center justify-center shadow-md">
-                    <IconExecutive />
-                  </div>
-                  <p className="text-navy-800 text-sm font-medium">Managing Director</p>
-                  <p className="text-navy-800/60 text-xs">Professional Headshot</p>
-                </div>
-              </div>
+              <Image
+                src="/MosesFemiAmupitan.jpeg"
+                alt="Moses Femi Amupitan - Managing Director & CEO"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 450px"
+                priority
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-red-500/10 rounded-2xl -z-10" aria-hidden="true" />
             <div className="absolute -top-4 -left-4 w-16 h-16 border-2 border-navy-200 rounded-2xl -z-10" aria-hidden="true" />
@@ -103,7 +103,7 @@ export default function ExecutiveMessage() {
 
             <motion.div className="border-t border-slate-200 pt-6" variants={fadeUp} custom={5}>
               <p className="text-3xl text-navy-950 mb-1" style={{ fontFamily: "var(--font-signature)" }}>
-                Ezime Onuigbo
+                Moses Femi Amupitan
               </p>
               <p className="text-slate-500 text-sm font-medium tracking-wide">
                 Managing Director / CEO

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WhyTurboservVisual from "./components/WhyTurboservVisual";
 import HeroSection from "./components/HeroSection";
 import CoreSolutions from "./components/CoreSolutions";
 import TurboservAdvantage from "./components/TurboservAdvantage";
@@ -124,7 +125,7 @@ export default function HomePage() {
           id="about"
         >
           {/* About & Risk Advisory intro */}
-          <div className="max-w-6xl mx-auto px-6 py-18 md:px-12 md:py-20 lg:px-20">
+          <div className="max-w-6xl mx-auto px-6 py-12 md:px-12 md:py-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="inline-block px-4 py-1.5 bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-semibold tracking-wider uppercase rounded-md mb-5">
@@ -152,40 +153,8 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  {
-                    number: "₦50B+",
-                    label: "Coverage Placed",
-                  },
-                  {
-                    number: "99.4%",
-                    label: "Claims Settled",
-                  },
-                  {
-                    number: "500+",
-                    label: "Corporate Clients",
-                  },
-                  {
-                    number: "15+",
-                    label: "Years of Excellence",
-                  },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="bg-navy-900/60 border border-navy-800 rounded-2xl p-5 text-center hover:border-red-500/40 transition-all duration-300"
-                  >
-                    <div
-                      className="text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white mb-1"
-                      style={{ fontFamily: "var(--font-display)" }}
-                    >
-                      {stat.number}
-                    </div>
-                    <div className="text-slate-400 text-xs font-medium tracking-wide uppercase">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
+              <div className="w-full flex justify-center">
+                <WhyTurboservVisual />
               </div>
             </div>
           </div>
