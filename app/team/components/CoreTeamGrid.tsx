@@ -4,34 +4,68 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
-/* ── Team member data ── */
-const teamMembers = [
+/* ── Member Interface ── */
+interface TeamMember {
+  name: string;
+  title: string;
+  image: string;
+  bio: string;
+  linkedin: string;
+  imageClassName?: string;
+  imageStyle?: React.CSSProperties;
+}
+
+/* ── Board of Directors data ── */
+const boardMembers: TeamMember[] = [
   {
     name: "Ezime Tunde-Imoyo",
-    title: "Head of Risk Management",
+    title: "Board of Director",
     image: "/EzimeTunde-Imoyo.jpeg",
-    bio: "Specialist in enterprise risk assessment and structured insurance programmes for Nigeria's financial services sector.",
+    bio: "A seasoned governance professional bringing strategic oversight and deep industry expertise to Turboserv's board.",
+    linkedin: "#",
+  },
+  {
+    name: "Prince Aderemi Sijuwade",
+    title: "Board of Director",
+    image: "/PrinceAderemiSijuwade.jpeg",
+    bio: "Provides visionary leadership and broad institutional knowledge that guides Turboserv's long-term growth and client commitments.",
+    linkedin: "#",
+  },
+  {
+    name: "Captain Jamil MD Abubakar",
+    title: "Board of Director",
+    image: "/CaptainJamilAbubakar.jpeg",
+    bio: "Brings distinguished leadership experience and a rigorous risk-management perspective to the company's strategic direction.",
+    linkedin: "#",
+  },
+];
+
+/* ── Management Team data ── */
+const managementMembers: TeamMember[] = [
+  {
+    name: "Tobi Shoda",
+    title: "Head Finance & IT",
+    image: "/TobiShoda.jpeg",
+    bio: "Oversees financial planning, reporting, and technology infrastructure — ensuring Turboserv operates with precision and resilience.",
     linkedin: "#",
   },
   {
     name: "Endurance Benson",
-    title: "Senior Technical Broker",
+    title: "Head of Administration",
     image: "/EnduranceBenson.png",
-    bio: "Brings deep technical underwriting knowledge across marine, engineering, and property classes for complex commercial risks.",
+    bio: "Drives operational excellence across all administrative functions, keeping the business running smoothly day-to-day.",
     linkedin: "#",
-  },
-  {
-    name: "Tobi Shoda",
-    title: "Claims Advocacy Lead",
-    image: "/TobiShoda.jpeg",
-    bio: "Dedicated to securing fair, prompt claim settlements — acting as the client's champion throughout every step of the process.",
-    linkedin: "#",
+    imageStyle: {
+      objectPosition: "80% 15%",
+      transform: "scale(1.75) translateX(-8%)",
+      transformOrigin: "center center",
+    },
   },
   {
     name: "Stella Agwu",
-    title: "Client Relations Director",
+    title: "Head Marketing & Sales",
     image: "/StellaAgwu.jpeg",
-    bio: "Ensures every Turboserv client receives a personalised, consultative experience from on-boarding through renewal.",
+    bio: "Champions brand growth and client acquisition, translating Turboserv's expertise into compelling market propositions.",
     linkedin: "#",
   },
 ];
@@ -81,13 +115,9 @@ function TeamCard({
   image,
   bio,
   linkedin,
-}: {
-  name: string;
-  title: string;
-  image: string;
-  bio: string;
-  linkedin: string;
-}) {
+  imageClassName,
+  imageStyle,
+}: TeamMember) {
   return (
     <motion.article
       className="group relative flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-shadow duration-500"
@@ -104,7 +134,8 @@ function TeamCard({
             src={image}
             alt={`${name} — ${title} at Turboserv Insurance Brokers`}
             fill
-            className="object-cover object-top"
+            className={`object-cover ${imageClassName || "object-top"}`}
+            style={imageStyle}
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 280px"
           />
         </motion.div>
@@ -153,62 +184,108 @@ function TeamCard({
   );
 }
 
-/* ── Main export ── */
-export default function CoreTeamGrid() {
-  const ref = useRef<HTMLElement>(null);
+/* ── Sub-section component ── */
+function TeamSection({
+  label,
+  heading,
+  subheading,
+  members,
+  headingAccent,
+  labelCustom,
+}: {
+  label: string;
+  heading: string;
+  subheading: string;
+  members: typeof boardMembers;
+  headingAccent: string;
+  labelCustom: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
+    <div ref={ref} className="mb-24 last:mb-0">
+      {/* Sub-section header */}
+      <motion.div
+        className="max-w-2xl mb-14"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
+        <motion.span
+          className="inline-block px-4 py-1.5 bg-navy-50 text-navy-800 border border-navy-100 text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-6"
+          variants={fadeUp}
+          custom={0}
+        >
+          {label}
+        </motion.span>
+        <motion.h2
+          className="text-[clamp(1.4rem,3vw,2.2rem)] font-bold leading-[1.1] tracking-[-0.025em] text-navy-950 mb-4"
+          style={{ fontFamily: "var(--font-display)" }}
+          variants={fadeUp}
+          custom={1}
+        >
+          {heading}{" "}
+          <span className="text-red-500">{headingAccent}</span>
+        </motion.h2>
+        <motion.p
+          className="text-slate-500 text-[0.9375rem] leading-relaxed"
+          variants={fadeUp}
+          custom={2}
+        >
+          {subheading}
+        </motion.p>
+      </motion.div>
+
+      {/* Staggered card grid */}
+      <motion.div
+        className={`grid grid-cols-1 sm:grid-cols-2 ${
+          members.length === 3
+            ? "lg:grid-cols-3"
+            : "lg:grid-cols-4"
+        } gap-6`}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
+        {members.map((member) => (
+          <TeamCard key={member.name} {...member} />
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
+/* ── Main export ── */
+export default function CoreTeamGrid() {
+  return (
     <section
-      ref={ref}
       id="core-team"
       className="py-24 md:py-32 bg-slate-50 overflow-hidden"
-      aria-label="Core team"
+      aria-label="Board of Directors and Management Team"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
-        {/* Section header */}
-        <motion.div
-          className="max-w-2xl mb-16"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-        >
-          <motion.span
-            className="inline-block px-4 py-1.5 bg-navy-50 text-navy-800 border border-navy-100 text-xs font-semibold tracking-[0.15em] uppercase rounded-full mb-6"
-            variants={fadeUp}
-            custom={0}
-          >
-            Core Team
-          </motion.span>
-          <motion.h2
-            className="text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold leading-[1.1] tracking-[-0.025em] text-navy-950 mb-4"
-            style={{ fontFamily: "var(--font-display)" }}
-            variants={fadeUp}
-            custom={1}
-          >
-            Experts Committed to{" "}
-            <span className="text-red-500">Your Protection</span>
-          </motion.h2>
-          <motion.p
-            className="text-slate-500 text-[0.9375rem] leading-relaxed"
-            variants={fadeUp}
-            custom={2}
-          >
-            Each member of our team brings specialist expertise and a genuine
-            commitment to delivering bespoke risk solutions for our clients.
-          </motion.p>
-        </motion.div>
+        {/* Board of Directors */}
+        <TeamSection
+          label="Board of Directors"
+          heading="Strategic Governance &"
+          headingAccent="Oversight"
+          subheading="Our board brings decades of collective leadership, corporate governance, and industry expertise to steer Turboserv's long-term vision."
+          members={boardMembers}
+          labelCustom={0}
+        />
 
-        {/* Staggered card grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-        >
-          {teamMembers.map((member) => (
-            <TeamCard key={member.name} {...member} />
-          ))}
-        </motion.div>
+        {/* Divider */}
+        <div className="border-t border-slate-200 my-4" aria-hidden="true" />
+
+        {/* Management Team */}
+        <TeamSection
+          label="Management Team"
+          heading="Operational Excellence &"
+          headingAccent="Execution"
+          subheading="Our management team translates board strategy into measurable results — driving finance, administration, and client growth with precision."
+          members={managementMembers}
+          labelCustom={3}
+        />
       </div>
     </section>
   );
