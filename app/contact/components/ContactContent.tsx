@@ -86,11 +86,11 @@ export default function ContactContent() {
             {/* Email & Phone */}
             <div className="space-y-1 pt-1">
               <a
-                href="mailto:ezime@turboservbrokers.com"
+                href="mailto:info@turboservbrokers.com"
                 className="block font-bold text-navy-950 text-lg sm:text-xl hover:text-red-600 transition-colors"
-                aria-label="Email ezime@turboservbrokers.com"
+                aria-label="Email info@turboservbrokers.com"
               >
-                ezime@turboservbrokers.com
+                info@turboservbrokers.com
               </a>
               <a
                 href="tel:08177402607"

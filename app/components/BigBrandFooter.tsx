@@ -11,10 +11,10 @@ export default function BigBrandFooter() {
           {/* Contact Details */}
           <div className="space-y-1">
             <a
-              href="mailto:ezime@turboservbrokers.com"
+              href="mailto:info@turboservbrokers.com"
               className="block hover:text-red-600 transition-colors"
             >
-              ezime@turboservbrokers.com
+              info@turboservbrokers.com
             </a>
             <a
               href="tel:08177402607"

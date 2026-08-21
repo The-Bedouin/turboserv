@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import {
   motion,
@@ -82,21 +83,21 @@ const IconAnchor = () => (
    ───────────────────────────────────────────────────────────── */
 const topRowCards = [
   {
-    href: "/services/corporate-insurance",
+    href: "/solutions/corporate-insurance",
     icon: <IconBuilding />,
     category: "Industrial & Commercial",
     title: "Corporate Insurance",
     desc: "Comprehensive asset defense spanning Fire & Special Perils, Engineering risks, and Oil & Gas operations for large-scale enterprises.",
   },
   {
-    href: "/services/motor-insurance",
+    href: "/solutions/motor",
     icon: <IconCar />,
     category: "Fleet & Mobility",
     title: "Motor Insurance",
     desc: "Enterprise fleet management and full comprehensive motor coverage to keep your operations moving safely at every turn.",
   },
   {
-    href: "/services/employee-benefits",
+    href: "/solutions/employee-benefits",
     icon: <IconGroup />,
     category: "Healthcare & Welfare",
     title: "Employee Benefits",
@@ -106,7 +107,7 @@ const topRowCards = [
 
 const bottomRowCards = [
   {
-    href: "/services/specialized-solutions",
+    href: "/solutions/specialized",
     icon: <IconShield />,
     category: "Growth & Emerging Risk",
     title: "Specialized Solutions",
@@ -114,7 +115,7 @@ const bottomRowCards = [
     wide: true,
   },
   {
-    href: "/services/claims-advocacy",
+    href: "/claims",
     icon: <IconAnchor />,
     category: "Risk & Claims",
     title: "Claims Advocacy",
@@ -137,7 +138,7 @@ interface CardProps {
 
 function SolutionCard({ href, icon, category, title, desc }: CardProps) {
   return (
-    <a
+    <Link
       href={href}
       className="group relative flex flex-col h-full bg-white rounded-2xl px-6.5 py-6 border border-gray-100/80 shadow-[0_2px_20px_rgba(7,18,32,0.04)] hover:shadow-[0_16px_48px_rgba(7,18,32,0.10)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
     >
@@ -176,7 +177,7 @@ function SolutionCard({ href, icon, category, title, desc }: CardProps) {
           </svg>
         </span>
       </div>
-    </a>
+    </Link>
   );
 }
 

@@ -284,10 +284,10 @@ export default function MegaFooter({ hideCTA = false }: { hideCTA?: boolean }) {
               </p>
               <p>
                 <a
-                  href="mailto:ezime@turboservbrokers.com"
+                  href="mailto:info@turboservbrokers.com"
                   className="hover:text-red-400 transition-colors duration-300"
                 >
-                  ezime@turboservbrokers.com
+                  info@turboservbrokers.com
                 </a>
               </p>
             </div>

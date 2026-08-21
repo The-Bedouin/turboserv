@@ -144,31 +144,6 @@ export default function BrokersEdge() {
           ))}
         </div>
 
-        {/* Stats bar */}
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={fadeUp}
-          custom={4}
-          className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 bg-white rounded-2xl border border-slate-200 px-8 py-8 shadow-sm"
-        >
-          {[
-            { value: "20+", label: "Years of market relationships" },
-            { value: "₦50Bn+", label: "Corporate assets under management" },
-            { value: "98%", label: "Claims satisfaction rate" },
-            { value: "A-Rated", label: "Insurer panel only" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div
-                className="text-[1.875rem] font-black text-navy-950 leading-none mb-1.5"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                {stat.value}
-              </div>
-              <div className="text-slate-500 text-[0.75rem] leading-relaxed">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

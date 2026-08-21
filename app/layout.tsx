@@ -121,6 +121,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${playfairDisplay.variable} ${greatVibes.variable} ${merriweather.variable} ${montserrat.variable} ${roboto.variable}`}
       suppressHydrationWarning
     >

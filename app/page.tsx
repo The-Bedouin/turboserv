@@ -36,7 +36,7 @@ const structuredData = {
         "Turboserv Insurance Brokers Limited is a professional insurance brokerage and risk management consulting firm dedicated to providing comprehensive insurance solutions that protect individuals, businesses, and corporate organizations.",
       foundingDate: "2010",
       telephone: "+234-817-740-2607",
-      email: "ezime@turboservbrokers.com",
+      email: "info@turboservbrokers.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "15B Karimu Kotun Street",

@@ -55,11 +55,6 @@ const managementMembers: TeamMember[] = [
     image: "/EnduranceBenson.png",
     bio: "Drives operational excellence across all administrative functions, keeping the business running smoothly day-to-day.",
     linkedin: "#",
-    imageStyle: {
-      objectPosition: "80% 15%",
-      transform: "scale(1.75) translateX(-8%)",
-      transformOrigin: "center center",
-    },
   },
   {
     name: "Stella Agwu",

@@ -190,7 +190,7 @@ export default function ClaimsFAQ() {
                 </a>
 
                 <a
-                  href="mailto:claims@turboservbrokers.com"
+                  href="mailto:info@turboservbrokers.com"
                   className="flex items-center gap-4 bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-4 hover:bg-red-600/20 hover:border-red-500/30 transition-all duration-300 group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-red-500/15 flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
@@ -198,7 +198,7 @@ export default function ClaimsFAQ() {
                   </div>
                   <div>
                     <p className="text-white text-sm font-semibold group-hover:text-red-400 transition-colors duration-300">
-                      claims@turboservbrokers.com
+                      info@turboservbrokers.com
                     </p>
                     <p className="text-slate-400 text-xs">Send an email</p>
                   </div>
