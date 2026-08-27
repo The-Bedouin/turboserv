@@ -7,7 +7,7 @@ import CoreTeamGrid from "./components/CoreTeamGrid";
 import TeamCTA from "./components/TeamCTA";
 
 export const metadata: Metadata = {
-  title: "Our Team | Turboserv Insurance Brokers Limited",
+  title: "Our Team | Turboservbrokers",
   description:
     "Meet the seasoned risk advisors, certified brokers, and client champions behind Turboserv Insurance Brokers Limited — Nigeria's most trusted corporate insurance brokerage.",
   keywords: [

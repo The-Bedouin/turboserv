@@ -256,10 +256,11 @@ export default function CoreTeamGrid() {
     <section
       id="core-team"
       className="py-24 md:py-32 bg-slate-50 overflow-hidden"
-      aria-label="Board of Directors and Management Team"
+      aria-label="Management Team"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
-        {/* Board of Directors */}
+        {/* Board of Directors (Hidden for now - uncomment block below to restore) */}
+        {/*
         <TeamSection
           label="Board of Directors"
           heading="Strategic Governance &"
@@ -269,8 +270,8 @@ export default function CoreTeamGrid() {
           labelCustom={0}
         />
 
-        {/* Divider */}
         <div className="border-t border-slate-200 my-4" aria-hidden="true" />
+        */}
 
         {/* Management Team */}
         <TeamSection

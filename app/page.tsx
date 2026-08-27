@@ -12,7 +12,7 @@ import MegaFooter from "./components/MegaFooter";
    ============================================================ */
 export const metadata: Metadata = {
   title:
-    "Corporate Insurance Brokers in Lagos | Turboserv Insurance Brokers Limited",
+    "Corporate Insurance Brokers in Lagos | Turboservbrokers",
   description:
     "Turboserv Insurance Brokers Limited is a leading corporate insurance brokerage and risk management consulting firm in Victoria Island, Lagos. We provide comprehensive insurance solutions for businesses, individuals, and corporate organizations across Nigeria.",
   alternates: {

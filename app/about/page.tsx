@@ -9,7 +9,7 @@ import QualityCSR from "./components/QualityCSR";
 import RegulatoryCompliance from "./components/RegulatoryCompliance";
 
 export const metadata: Metadata = {
-  title: "About Us | Turboserv Insurance Brokers Limited",
+  title: "About Us | Turboservbrokers",
   description:
     "Learn about Turboserv Insurance Brokers Limited — a leading professional insurance brokerage and risk management consulting firm in Lagos, Nigeria. Discover our vision, leadership, and commitment to corporate excellence.",
   alternates: { canonical: "https://turboservbrokers.com/about" },

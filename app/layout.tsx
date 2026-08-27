@@ -52,12 +52,14 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: {
     default:
-      "Turboserv Insurance Brokers Limited | Corporate Insurance Brokers in Lagos",
-    template: "%s | Turboserv Insurance Brokers Limited",
+      "Turboservbrokers | Corporate Insurance Brokers in Lagos",
+    template: "%s | Turboservbrokers",
   },
   description:
     "Turboserv Insurance Brokers Limited is a leading professional insurance brokerage and risk management consulting firm in Victoria Island, Lagos, Nigeria. We provide comprehensive corporate insurance solutions.",
+  applicationName: "Turboservbrokers",
   keywords: [
+    "Turboservbrokers",
     "Corporate Insurance Brokers in Lagos",
     "insurance brokers Lagos",
     "risk management Nigeria",
@@ -66,9 +68,9 @@ export const metadata: Metadata = {
     "Turboserv Insurance",
     "Victoria Island insurance broker",
   ],
-  authors: [{ name: "Turboserv Insurance Brokers Limited" }],
-  creator: "Turboserv Insurance Brokers Limited",
-  publisher: "Turboserv Insurance Brokers Limited",
+  authors: [{ name: "Turboservbrokers" }],
+  creator: "Turboservbrokers",
+  publisher: "Turboservbrokers",
   robots: {
     index: true,
     follow: true,
@@ -81,31 +83,34 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/TURBOSERVLOGO.png",
-    shortcut: "/TURBOSERVLOGO.png",
-    apple: "/TURBOSERVLOGO.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     type: "website",
     locale: "en_NG",
     url: "https://turboservbrokers.com",
-    siteName: "Turboserv Insurance Brokers Limited",
+    siteName: "Turboservbrokers",
     title:
-      "Turboserv Insurance Brokers Limited | Corporate Insurance Brokers in Lagos",
+      "Turboservbrokers | Corporate Insurance Brokers in Lagos",
     description:
       "Professional insurance brokerage and risk management consulting firm dedicated to providing comprehensive insurance solutions in Lagos, Nigeria.",
     images: [
       {
         url: "/TURBOSERVLOGO.png",
-        width: 800,
-        height: 250,
-        alt: "Turboserv Insurance Brokers Logo",
+        width: 873,
+        height: 286,
+        alt: "Turboservbrokers Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Turboserv Insurance Brokers Limited",
+    title: "Turboservbrokers | Corporate Insurance Brokers in Lagos",
     description:
       "Professional insurance brokerage and risk management consulting firm in Lagos, Nigeria.",
     images: ["/TURBOSERVLOGO.png"],
