@@ -32,6 +32,7 @@ const structuredData = {
       name: "Turboserv Insurance Brokers Limited",
       alternateName: "Turboserv Brokers",
       url: "https://turboservbrokers.com",
+      logo: "https://turboservbrokers.com/TURBOSERVLOGO.png",
       description:
         "Turboserv Insurance Brokers Limited is a professional insurance brokerage and risk management consulting firm dedicated to providing comprehensive insurance solutions that protect individuals, businesses, and corporate organizations.",
       foundingDate: "2010",
