@@ -104,7 +104,7 @@ export const metadata: Metadata = {
         url: "/TURBOSERVLOGO.png",
         width: 873,
         height: 286,
-        alt: "Turboservbrokers Logo",
+        alt: "Turboserv Insurance Brokers",
       },
     ],
   },
