@@ -258,7 +258,7 @@ export default function MegaFooter({ hideCTA = false }: { hideCTA?: boolean }) {
               <div className="bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-xl shadow-md inline-flex items-center">
                 <Image
                   src="/TURBOSERVLOGO.png"
-                  alt="Turboserv Insurance Brokers Logo"
+                  alt="Turboserv Insurance Brokers"
                   width={160}
                   height={36}
                   className="h-7 w-auto object-contain"

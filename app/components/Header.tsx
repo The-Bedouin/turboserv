@@ -107,7 +107,7 @@ export default function Header() {
           >
             <Image
               src="/TURBOSERVLOGO.png"
-              alt="Turboserv Insurance Brokers Logo"
+              alt="Turboserv Insurance Brokers"
               width={180}
               height={40}
               className="h-7 sm:h-8 w-auto object-contain"
