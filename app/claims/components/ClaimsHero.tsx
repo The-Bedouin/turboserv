@@ -96,7 +96,7 @@ export default function ClaimsHero() {
             />
           </a>
           <a
-            href="tel:+2348177402607"
+            href="tel:+2348101556689"
             className="inline-flex items-center gap-3 px-7 py-3.5 border border-slate-200 hover:border-slate-300 rounded-full text-sm font-semibold text-navy-950 transition-all duration-300 hover:bg-slate-50 active:scale-[0.98]"
           >
             <FontAwesomeIcon icon={faPhoneVolume} className="w-4 h-4 text-red-600" />

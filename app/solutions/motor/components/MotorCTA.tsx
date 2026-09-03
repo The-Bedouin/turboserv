@@ -138,7 +138,7 @@ export default function MotorCTA() {
 
           {/* Secondary CTA */}
           <a
-            href="tel:+2348177402607"
+            href="tel:+2348101556689"
             id="motor-cta-speak-broker-btn"
             className="group inline-flex items-center gap-3 px-9 py-4 rounded-full text-[0.9375rem] font-semibold text-white border border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300"
             aria-label="Speak to a motor insurance specialist"

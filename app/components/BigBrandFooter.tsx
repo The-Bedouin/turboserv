@@ -17,16 +17,16 @@ export default function BigBrandFooter() {
               info@turboservbrokers.com
             </a>
             <a
-              href="tel:08177402607"
+              href="tel:+2348101556689"
               className="block hover:text-red-600 transition-colors"
             >
-              +234 817 740 2607
+              +234 810 155 6689
             </a>
           </div>
 
           {/* Address */}
           <div className="space-y-1">
-            <p>15B Karimu Kotun Street,</p>
+            <p>5B Karimu Kotun Street,</p>
             <p>Victoria Island, Lagos, Nigeria</p>
           </div>
 

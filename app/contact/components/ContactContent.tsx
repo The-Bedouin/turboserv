@@ -76,7 +76,7 @@ export default function ContactContent() {
             {/* Address */}
             <div>
               <p className="font-bold text-navy-950 text-lg sm:text-xl leading-snug">
-                15B Karimu Kotun Street,
+                5B Karimu Kotun Street,
               </p>
               <p className="font-bold text-navy-950 text-lg sm:text-xl leading-snug">
                 Victoria Island, Lagos, Nigeria
@@ -93,11 +93,11 @@ export default function ContactContent() {
                 info@turboservbrokers.com
               </a>
               <a
-                href="tel:08177402607"
+                href="tel:+2348101556689"
                 className="block font-bold text-navy-950 text-lg sm:text-xl hover:text-red-600 transition-colors"
-                aria-label="Call Turboserv at +234 817 740 2607"
+                aria-label="Call Turboserv at +234 810 155 6689"
               >
-                +234 817 740 2607
+                +234 810 155 6689
               </a>
             </div>
           </motion.div>

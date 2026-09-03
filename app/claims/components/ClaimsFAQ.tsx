@@ -175,7 +175,7 @@ export default function ClaimsFAQ() {
               {/* Right: contact cards */}
               <div className="space-y-3">
                 <a
-                  href="tel:+2348177402607"
+                  href="tel:+2348101556689"
                   className="flex items-center gap-4 bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-4 hover:bg-red-600/20 hover:border-red-500/30 transition-all duration-300 group"
                 >
                   <div className="w-11 h-11 rounded-xl bg-red-500/15 flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
@@ -183,7 +183,7 @@ export default function ClaimsFAQ() {
                   </div>
                   <div>
                     <p className="text-white text-sm font-semibold group-hover:text-red-400 transition-colors duration-300">
-                      +234 817 740 2607
+                      +234 810 155 6689
                     </p>
                     <p className="text-slate-400 text-xs">Click to call now</p>
                   </div>
@@ -210,7 +210,7 @@ export default function ClaimsFAQ() {
                   </div>
                   <div>
                     <p className="text-white text-sm font-semibold">
-                      15B Karimu Kotun Street
+                      5B Karimu Kotun Street
                     </p>
                     <p className="text-slate-400 text-xs">Victoria Island, Lagos</p>
                   </div>

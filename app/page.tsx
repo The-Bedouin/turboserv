@@ -35,11 +35,11 @@ const structuredData = {
       description:
         "Turboserv Insurance Brokers Limited is a professional insurance brokerage and risk management consulting firm dedicated to providing comprehensive insurance solutions that protect individuals, businesses, and corporate organizations.",
       foundingDate: "2010",
-      telephone: "+234-817-740-2607",
+      telephone: "+234-810-155-6689",
       email: "info@turboservbrokers.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "15B Karimu Kotun Street",
+        streetAddress: "5B Karimu Kotun Street",
         addressLocality: "Victoria Island",
         addressRegion: "Lagos",
         addressCountry: "NG",

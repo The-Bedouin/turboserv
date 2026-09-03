@@ -272,14 +272,14 @@ export default function MegaFooter({ hideCTA = false }: { hideCTA?: boolean }) {
             </p>
             {/* Address */}
             <div className="text-slate-500 text-xs leading-relaxed space-y-1">
-              <p>15B Karimu Kotun Street</p>
+              <p>5B Karimu Kotun Street</p>
               <p>Victoria Island, Lagos, Nigeria</p>
               <p className="mt-2">
                 <a
-                  href="tel:+2348177402607"
+                  href="tel:+2348101556689"
                   className="hover:text-red-400 transition-colors duration-300"
                 >
-                  +234 817 740 2607
+                  +234 810 155 6689
                 </a>
               </p>
               <p>

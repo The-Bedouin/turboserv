@@ -58,7 +58,7 @@ const managementMembers: TeamMember[] = [
   },
   {
     name: "Stella Agwu",
-    title: "Head Marketing & Sales",
+    title: "Business Development Manager",
     image: "/StellaAgwu.jpeg",
     bio: "Champions brand growth and client acquisition, translating Turboserv's expertise into compelling market propositions.",
     linkedin: "#",
