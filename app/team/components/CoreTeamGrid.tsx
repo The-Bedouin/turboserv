@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, type CSSProperties } from "react";
 import Image from "next/image";
 
 /* ── Member Interface ── */
@@ -12,7 +12,7 @@ interface TeamMember {
   bio: string;
   linkedin: string;
   imageClassName?: string;
-  imageStyle?: React.CSSProperties;
+  imageStyle?: CSSProperties;
 }
 
 /* ── Board of Directors data ── */
@@ -52,7 +52,7 @@ const managementMembers: TeamMember[] = [
   {
     name: "Endurance Benson",
     title: "Head of Administration",
-    image: "/endurance benson.jpg",
+    image: "/endurancebenson.jpg",
     bio: "Drives operational excellence across all administrative functions, keeping the business running smoothly day-to-day.",
     linkedin: "#",
   },
@@ -186,14 +186,12 @@ function TeamSection({
   subheading,
   members,
   headingAccent,
-  labelCustom,
 }: {
   label: string;
   heading: string;
   subheading: string;
-  members: typeof boardMembers;
+  members: TeamMember[];
   headingAccent: string;
-  labelCustom: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.1 });
@@ -280,7 +278,6 @@ export default function CoreTeamGrid() {
           headingAccent="Execution"
           subheading="Our management team translates board strategy into measurable results — driving finance, administration, and client growth with precision."
           members={managementMembers}
-          labelCustom={3}
         />
       </div>
     </section>
