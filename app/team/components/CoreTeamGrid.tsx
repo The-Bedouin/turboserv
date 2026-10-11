@@ -52,13 +52,13 @@ const managementMembers: TeamMember[] = [
   {
     name: "Endurance Benson",
     title: "Head of Administration",
-    image: "/EnduranceBenson.png",
+    image: "/endurance benson.jpg",
     bio: "Drives operational excellence across all administrative functions, keeping the business running smoothly day-to-day.",
     linkedin: "#",
   },
   {
     name: "Stella Agwu",
-    title: "Business Development Manager",
+    title: "General Manager",
     image: "/StellaAgwu.jpeg",
     bio: "Champions brand growth and client acquisition, translating Turboserv's expertise into compelling market propositions.",
     linkedin: "#",
